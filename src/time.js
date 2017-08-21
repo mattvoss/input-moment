@@ -24,7 +24,14 @@ export default class extends Component {
           <span className="time">{m.format('hh')}</span>
           <span className="separater">:</span>
           <span className="time">{m.format('mm')}</span>
-          <span className="am">{m.format('a')}</span>
+          <span 
+            className="am"
+            style={{
+              marginTop: (m.format('a') === 'am') ? '0px' : '40px'
+            }}
+          >
+            {m.format('A')}
+          </span>
         </div>
 
         <div className="sliders">
